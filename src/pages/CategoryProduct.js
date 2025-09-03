@@ -9,7 +9,7 @@ const CategoryProduct = () => {
     const navigate = useNavigate();
     const [products, setProducts] = useState([]);
     const [category, setCategory] = useState([]);
-    const [loading, setLoading] = useState(true); // Loading state
+    const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
         if (params?.slug) getProductsByCat();
@@ -22,10 +22,10 @@ const CategoryProduct = () => {
             );
             setProducts(data?.products);
             setCategory(data?.category);
-            setLoading(false); // Stop loading after fetching data
+            setLoading(false); 
         } catch (error) {
             console.log(error);
-            setLoading(false); // Stop loading on error
+            setLoading(false); 
         }
     };
 
@@ -99,29 +99,7 @@ const CategoryProduct = () => {
                                             >
                                                 View Details
                                             </button>
-                                            {/* <button
-                                                className="btn"
-                                                style={{
-                                                    padding: "10px 20px",
-                                                    fontSize: "14px",
-                                                    borderRadius: "25px",
-                                                    background: "linear-gradient(90deg, #00A88E, #007ACC)",
-                                                    color: "#fff",
-                                                    border: "none",
-                                                    cursor: "pointer",
-                                                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                                                    transition: "background 0.3s ease",
-                                                }}
-                                                onClick={() => {
-                                                    // Add to cart logic
-                                                    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-                                                    cart.push(p);
-                                                    localStorage.setItem("cart", JSON.stringify(cart));
-                                                    toast.success("Item Added to Cart");
-                                                }}
-                                            >
-                                                ADD TO CART
-                                            </button> */}
+                                    
                                         </div>
                                     </div>
                                 ))}
