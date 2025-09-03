@@ -34,13 +34,13 @@ const UserData = () => {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      render: text => <span style={{ color: '#333' }}>{text}</span>, // Adjust column text color here
+      render: text => <span style={{ color: '#333' }}>{text}</span>,
     },
     {
       title: 'Email',
       dataIndex: 'email',
       key: 'email',
-      render: text => <span style={{ color: '#333' }}>{text}</span>, // Adjust column text color here
+      render: text => <span style={{ color: '#333' }}>{text}</span>,
     },
     {
       title: 'Phone',
