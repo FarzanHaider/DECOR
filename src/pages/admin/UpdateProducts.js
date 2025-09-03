@@ -21,7 +21,7 @@ const UpdateProducts = () => {
     const [photo, setPhoto] = useState("");
     const [id, setId] = useState("");
 
-    //GET SINGLE PRODUCT
+    
     const getSingleProduct = async () => {
         try {
             const { data } = await axios.get(`http://localhost:5000/api/v1/product/get-product/${params.slug}`
@@ -39,10 +39,10 @@ const UpdateProducts = () => {
     };
     useEffect(() => {
         getSingleProduct();
-        //eslint-disable-next-line
+     
     }, []);
 
-    //Get All Category 
+   
     const getAllCategory = async () => {
         try {
             const { data } = await axios.get("http://localhost:5000/api/v1/category/get-category")
@@ -57,7 +57,7 @@ const UpdateProducts = () => {
         getAllCategory();
     }, []);
 
-    //Create Product Function
+   
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
@@ -83,7 +83,7 @@ const UpdateProducts = () => {
         }
     };
 
-    //delete a product
+   
     const handleDelete = async () => {
         try {
             let answer = window.prompt("Are You Sure want to delete this product ? ");
