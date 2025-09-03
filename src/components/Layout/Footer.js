@@ -10,7 +10,6 @@ const Footer = () => {
           <h3 style={{ color: '#333333' }}>CONTACT INFO</h3>
           <p>Liberty Market, Gulberg III, Lahore</p>
           <p>+92 316 4435826 / +92 326 4287085 </p>
-          <p><a href="mailto:samabbas1823@gmail.com" style={{ color: '#ff6600', textDecoration: 'none' }}>samabbas1823@gmail.com"</a></p>
           <div style={{ display: 'flex', gap: '10px' }}>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: '#333' }}><FacebookOutlined /></a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: '#333' }}><InstagramOutlined /></a>
