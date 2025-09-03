@@ -34,7 +34,7 @@ const SearchInput = () => {
         className="d-flex"
         role="search"
         onSubmit={handleSubmit}
-        style={{ flex: 2, marginLeft: '10px' }} // Adding margin to the left
+        style={{ flex: 2, marginLeft: '10px' }} 
       >
         <input
           className="form-control search-form"
