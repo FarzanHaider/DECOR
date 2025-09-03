@@ -12,7 +12,7 @@ const CreateCategory = () => {
     const [selected, setSelected] = useState(null);
     const [updatedName, setUpdatedName] = useState("");
 
-    // Handle Form Submission
+  
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -31,7 +31,7 @@ const CreateCategory = () => {
         }
     };
 
-    // Get All Categories
+  
     const getAllCategory = async () => {
         try {
             const { data } = await axios.get("http://localhost:5000/api/v1/category/get-category");
@@ -47,7 +47,7 @@ const CreateCategory = () => {
         getAllCategory();
     }, []);
 
-    // Handle Update Category
+  
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
@@ -66,7 +66,7 @@ const CreateCategory = () => {
         }
     };
 
-    // Handle Delete Category
+   
     const handleDelete = async (categoryId) => {
         try {
             const { data } = await axios.delete(`http://localhost:5000/api/v1/category/delete-category/${categoryId}`);
