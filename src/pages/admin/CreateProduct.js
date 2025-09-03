@@ -15,10 +15,10 @@ const CreateProduct = () => {
     const [price, setPrice] = useState("");
     const [category, setCategory] = useState("");
     const [quantity, setQuantity] = useState("");
-    const [shipping, setShipping] = useState(""); // Fixed state variable
+    const [shipping, setShipping] = useState(""); 
     const [photo, setPhoto] = useState("");
 
-    // Get All Category 
+  
     const getAllCategory = async () => {
         try {
             const { data } = await axios.get("http://localhost:5000/api/v1/category/get-category");
@@ -33,7 +33,7 @@ const CreateProduct = () => {
         getAllCategory();
     }, []);
 
-    // Create Product Function
+   
     const handleCreate = async (e) => {
         e.preventDefault();
         try {
@@ -44,7 +44,7 @@ const CreateProduct = () => {
             productData.append("quantity", quantity);
             productData.append("photo", photo);
             productData.append("category", category);
-            productData.append("shipping", shipping); // Add shipping to product data
+            productData.append("shipping", shipping); 
             const { data } = await axios.post("http://localhost:5000/api/v1/product/create-product", productData);
             if (data.success) {
                 toast.success("Product Created Successfully");
