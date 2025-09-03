@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./../components/Layout/Layout.js";
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom"; // Importing useNavigate
+import { useParams, useNavigate } from "react-router-dom"; 
 import { useCart } from "../Context/cart.js";
 import toast from "react-hot-toast";
 
@@ -11,7 +11,7 @@ const ProductDetails = () => {
   const [products, setProducts] = useState({});
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // Initializing navigate function
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     if (params?.slug) getProduct();
@@ -65,7 +65,7 @@ const ProductDetails = () => {
               className="col-md-6"
               style={{
                 color: "rgb(51, 51, 51)",
-                paddingLeft: "80px", // Shifted further right
+                paddingLeft: "80px",
               }}
             >
               <h1 style={{ marginBottom: "20px" }}>Product Details</h1>
@@ -83,7 +83,7 @@ const ProductDetails = () => {
               <p
                 style={{
                   marginBottom: "15px",
-                  fontSize: "20px", // Larger font size
+                  fontSize: "20px", 
                 }}
               >
                 <strong>Price:</strong> Rs {products.price}
@@ -91,7 +91,7 @@ const ProductDetails = () => {
               <p
                 style={{
                   marginBottom: "15px",
-                  fontSize: "20px", // Larger font size
+                  fontSize: "20px",
                 }}
               >
                 <strong>Category:</strong> {products?.category?.name}
@@ -102,16 +102,16 @@ const ProductDetails = () => {
                 style={{
                   padding: "12px 25px",
                   fontSize: "16px",
-                  borderRadius: "25px", // More rounded for a modern look
-                  background: "linear-gradient(90deg, #00A88E, #007ACC)", // New gradient for appeal
+                  borderRadius: "25px", 
+                  background: "linear-gradient(90deg, #00A88E, #007ACC)", 
                   color: "#fff",
                   border: "none",
                   cursor: "pointer",
-                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Adding shadow for depth
+                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", 
                   transition: "background 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.background = "linear-gradient(90deg, #007ACC, #00A88E)"; // Hover effect
+                  e.target.style.background = "linear-gradient(90deg, #007ACC, #00A88E)"; 
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.background = "linear-gradient(90deg, #00A88E, #007ACC)";
@@ -140,9 +140,9 @@ const ProductDetails = () => {
           ) : (
             relatedProducts.map((p) => (
               <div
-                className="col-md-3" // Reduced width for a compact look
+                className="col-md-3" 
                 key={p._id}
-                onClick={() => navigate(`/product/${p.slug}`)} // Navigate to product details on click
+                onClick={() => navigate(`/product/${p.slug}`)} 
                 style={{
                   cursor: "pointer",
                 }}
@@ -154,13 +154,13 @@ const ProductDetails = () => {
                     marginBottom: "20px",
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                     borderRadius: "10px",
-                    transition: "transform 0.2s ease-in-out", // Add hover effect
+                    transition: "transform 0.2s ease-in-out", 
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "scale(1.05)"; // Slight zoom on hover
+                    e.currentTarget.style.transform = "scale(1.05)"; 
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "scale(1)"; // Reset zoom
+                    e.currentTarget.style.transform = "scale(1)"; 
                   }}
                 >
                   <img
