@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 const ViewProducts = () => {
     const [Products, setProducts] = useState([]);
-    const [hoveredProduct, setHoveredProduct] = useState(null); // To track the hovered product
+    const [hoveredProduct, setHoveredProduct] = useState(null);
 
-    // Get All Products 
+   
     const getAllProducts = async () => {
         try {
             const { data } = await axios.get("http://localhost:5000/api/v1/product/get-product");
@@ -19,7 +19,7 @@ const ViewProducts = () => {
         }
     };
 
-    // Lifecycle Methods
+   
     useEffect(() => {
         getAllProducts();
     }, []);
