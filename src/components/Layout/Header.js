@@ -61,7 +61,7 @@ const Header = ({ onLoginRegisterClick }) => {
       <Navbar onLoginRegisterClick={onLoginRegisterClick} />
       <SearchInput />
 
-      {/* Move the cart icon after the search bar */}
+    
       {userRole !== 1 && (
         <NavLink to="/cart" style={iconStyle} className="cart-icon">
           <BsCart />
