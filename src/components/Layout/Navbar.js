@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = ({ onLoginRegisterClick }) => {
     const [auth, setAuth] = useAuth();
-    const categories = useCategory(); // Fetch categories
+    const categories = useCategory(); 
     const [dropdownVisible, setDropdownVisible] = useState(false);
 
     const handleLogOut = () => {
