@@ -72,7 +72,7 @@ const OrderAdmin = () => {
                                             <td>{i + 1}</td>
                                             <td>
                                                 <Select
-                                                    style={{ minWidth: "150px" }} // Set minimum width for the dropdown
+                                                    style={{ minWidth: "150px" }} 
                                                     bordered={false}
                                                     onChange={(value) => handleChange(o._id, value)}
                                                     defaultValue={o?.status}
@@ -89,7 +89,7 @@ const OrderAdmin = () => {
                                             <td>
                                                 {o?.payments && o.payments.success
                                                     ? "Success"
-                                                    : "COD"} {/* Fixed logic to always show COD if payment is not successful */}
+                                                    : "COD"} 
                                             </td>
                                             <td>{o?.products?.length}</td>
                                         </tr>
