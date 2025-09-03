@@ -37,7 +37,7 @@ const Sidebar = () => {
     setOrdersOpen(!ordersOpen);
   };
 
-  const toggleUsers = () => { // Toggle function for managing users
+  const toggleUsers = () => { 
     setUsersOpen(!usersOpen);
   };
 
@@ -54,7 +54,7 @@ const Sidebar = () => {
     overflowY: 'auto',
     display: 'flex',
     flexDirection: 'column',
-    fontSize: "35px" // Ensure items stack vertically
+    fontSize: "35px" 
   };
 
   const closeButtonStyle = {
@@ -90,7 +90,7 @@ const Sidebar = () => {
 
   const submenuItemStyle = {
     padding: '10px 20px',
-    fontSize: '16px', // Increased font size for submenu items
+    fontSize: '16px',
     display: 'flex',
     alignItems: 'center',
   };
@@ -112,7 +112,7 @@ const Sidebar = () => {
           <FaTimes onClick={toggleDrawer} style={{ fontSize: '20px', cursor: 'pointer', marginLeft: 'auto', marginTop: "10px" }} />
         </div>
 
-        {/* Check if userRole is 1 */}
+       
         {userRole === 1 && (
           <>
             <div style={separatorStyle}></div>
@@ -215,7 +215,7 @@ const Sidebar = () => {
         </div>
         {ordersOpen && (
           <div style={submenuStyle}>
-            {/* Show "View Orders" for role === 0 */}
+          
             {userRole === 0 && (
               <NavLink
                 to="/user/orders"
@@ -226,7 +226,7 @@ const Sidebar = () => {
                 <Text style={{ fontSize: '18px' }}> . View Orders</Text>
               </NavLink>
             )}
-            {/* Show "Manage Orders" for role === 1 */}
+         
             {userRole === 1 && (
               <NavLink
                 to="/admin/orders"
@@ -272,7 +272,7 @@ const Sidebar = () => {
             )}
           </>
         )}
-        {/* Add "Manage Users" section */}
+     
         {userRole === 0 && (
           <>
             <div style={separatorStyle}></div>
