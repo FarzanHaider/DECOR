@@ -136,7 +136,7 @@ const HomePage = () => {
         };
 
         window.addEventListener('resize', handleResize);
-        handleResize(); // Initialize on mount
+        handleResize(); 
 
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -183,7 +183,7 @@ const HomePage = () => {
                         </Tooltip>
                     </div>
 
-                    {/* Conditionally render filters based on showFilters state */}
+                    
                     {showFilters && (
                         <div className="col-md-3" style={{ width: '100%', maxWidth: '300px', marginBottom: '20px' }}>
                             <h2 className="text-center">Filter By Category</h2>
@@ -269,9 +269,9 @@ const HomePage = () => {
                             <div className="cart-modal" style={{
                                 position: 'fixed',
                                 color: "white",
-                                top: '50%', // Center vertically
+                                top: '50%',
                                 left: '54%',
-                                transform: 'translate(-50%, -50%)', // Adjust to center the modal
+                                transform: 'translate(-50%, -50%)', 
                                 width: '800px',
                                 backgroundColor: 'rgb(58, 25, 16)',
                                 padding: '-2px',
@@ -321,25 +321,25 @@ const HomePage = () => {
                                         loadMore();
                                     }}
                                     style={{
-                                        backgroundColor: 'rgb(51, 51, 51)',  // Dark background
-                                        color: 'white',                      // White text color
-                                        padding: '12px 30px',                // More padding for better spacing
-                                        border: 'none',                      // Remove border
-                                        borderRadius: '30px',                // Circular rounded edges for a modern look
-                                        fontSize: '16px',                    // Slightly larger font for readability
-                                        cursor: 'pointer',                   // Change cursor on hover
-                                        marginRight: '1500px',                 // More margin from the right side
-                                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)', // Add a subtle shadow for depth
+                                        backgroundColor: 'rgb(51, 51, 51)',  
+                                        color: 'white',                      
+                                        padding: '12px 30px',               
+                                        border: 'none',                      
+                                        borderRadius: '30px',              
+                                        fontSize: '16px',                   
+                                        cursor: 'pointer',                 
+                                        marginRight: '1500px',                 
+                                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)', 
                                         transition: 'all 0.3s ease',
-                                        whiteSpace: "nowrap"      // Smooth transition for hover effects
+                                        whiteSpace: "nowrap"     
                                     }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.style.backgroundColor = '#343434';  // Darker grey on hover
-                                        e.currentTarget.style.transform = 'scale(1.05)';    // Slight scaling on hover
+                                        e.currentTarget.style.backgroundColor = '#343434';  
+                                        e.currentTarget.style.transform = 'scale(1.05)';    
                                     }}
                                     onMouseLeave={(e) => {
-                                        e.currentTarget.style.backgroundColor = 'rgb(51, 51, 51)';  // Revert color
-                                        e.currentTarget.style.transform = 'scale(1)';              // Revert scaling
+                                        e.currentTarget.style.backgroundColor = 'rgb(51, 51, 51)';  
+                                        e.currentTarget.style.transform = 'scale(1)';              
                                     }}
                                 >
                                     {loading ? "Loading ..." : "Load More"}
