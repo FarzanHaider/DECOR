@@ -22,7 +22,6 @@ const Contact = () => {
 
             }}>
 
-                {/* Hero Section */}
                 <div style={{
                     backgroundColor: 'rgba(255, 255, 255, 0.9)',
                     padding: '50px',
@@ -34,7 +33,7 @@ const Contact = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-around',
-                    marginBottom: "20px" // Distribute space evenly
+                    marginBottom: "20px" 
                 }}>
                     <Title level={2} style={{ color: '#333', fontSize: '40px', marginBottom: '10px' }}>Let's Get in Touch!</Title>
                     <Divider style={{ borderColor: '#ff6600' }} />
@@ -42,9 +41,9 @@ const Contact = () => {
                         We’re here to help you with your furniture needs. Feel free to contact us through any of the following channels:
                     </Paragraph>
 
-                    {/* Contact Links */}
+                
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', flexWrap: 'wrap', gap: '30px' }}>
-                        {/* Contact Links Hover and Zoom Effect */}
+                       
                         <style>
                             {`
                             .contact-link {
@@ -60,39 +59,36 @@ const Contact = () => {
                             }
                         `}
                         </style>
-                        {/* Email */}
+            
                         <a href="mailto:khadija6300@gmail.com" className="contact-link">
                             <MailOutlined style={{ fontSize: '35px', marginRight: '15px', color: '#ff6600' }} />
                             Email Us
                         </a>
 
-                        {/* Instagram */}
+             
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="contact-link">
                             <InstagramOutlined style={{ fontSize: '35px', marginRight: '15px', color: '#C13584' }} />
                             Instagram
                         </a>
 
-                        {/* Facebook */}
+         
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="contact-link">
                             <FacebookOutlined style={{ fontSize: '35px', marginRight: '15px', color: '#1877F2' }} />
                             Facebook
                         </a>
 
-                        {/* WhatsApp */}
+              
                         <a href="https://wa.me/03076203172" target="_blank" rel="noopener noreferrer" className="contact-link">
                             <WhatsAppOutlined style={{ fontSize: '35px', marginRight: '15px', color: '#25D366' }} />
                             WhatsApp
                         </a>
 
-                        {/* Phone */}
-                        <a href="tel:+123456789" className="contact-link">
-                            <PhoneOutlined style={{ fontSize: '35px', marginRight: '15px', color: '#ff6600' }} />
-                            +92 307 6203 172
-                        </a>
+                     
+                
                     </div>
 
-                    {/* Footer Text */}
-                    <Paragraph style={{ fontSize: '16px', color: '#777', marginTop: '20px' }}>
+                 
+       <Paragraph style={{ fontSize: '16px', color: '#777', marginTop: '20px' }}>
                         We look forward to hearing from you. Whether you need help selecting the perfect piece of furniture or have any other questions, we're just a click away.
                     </Paragraph>
                 </div>
