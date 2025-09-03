@@ -12,7 +12,6 @@ const Search = () => {
     const navigate = useNavigate();
     const [cart, setCart] = useCart();
 
-    // Function to handle "Add to Cart"
     const handleAddToCart = (product) => {
         setCart([...cart, product]);
         toast.success("Item Added to Cart");
