@@ -43,12 +43,12 @@ const CartPage = () => {
         }
     };
 
-    // Handle Cash on Delivery with cart check
+   
     const handleCashOnDeliveryClick = () => {
         if (cart.length === 0) {
             toast.error("Please select an item before proceeding!");
         } else {
-            setShowModal(true); // Open the modal if items are in the cart
+            setShowModal(true); 
         }
     };
 
@@ -200,8 +200,8 @@ const CartPage = () => {
                                         style={buttonStyle}
                                         onMouseEnter={(e) => e.target.style.background = buttonHoverStyle.background}
                                         onMouseLeave={(e) => e.target.style.background = "linear-gradient(90deg, #00A88E, #007ACC)"}
-                                        onClick={handleCashOnDeliveryClick} // Use the cart check function
-                                        disabled={!auth?.token || loading} // Disable if not logged in or loading
+                                        onClick={handleCashOnDeliveryClick} 
+                                        disabled={!auth?.token || loading} 
                                     >
                                         Pay with Cash on Delivery
                                     </button>
