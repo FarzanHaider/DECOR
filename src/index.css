@@ -1,6 +1,3 @@
-/* styles.css */
-/* index.css */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -40,25 +37,25 @@ body {
 .searchbar {
   display: flex;
   align-items: center;
-  max-width: 400px; /* Adjust maximum width as needed */
-  margin: 0 auto; /* Center align horizontally */
+  max-width: 400px; 
+  margin: 0 auto; 
 }
 
 .searchbar input {
-  padding: 10px; /* Increased padding for better touch target */
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px 0 0 4px;
-  font-size: 16px; /* Adjust font size */
+  font-size: 16px; 
 }
 
 .searchbar button {
-  padding: 10px 20px; /* Adjusted padding for better visual balance */
+  padding: 10px 20px; 
   border: none;
   background-color: #5A372F;
   color: #fff;
   cursor: pointer;
   border-radius: 0 4px 4px 0;
-  font-size: 16px; /* Adjust font size */
+  font-size: 16px; 
 }
 
 .searchbar button:hover {
@@ -149,7 +146,7 @@ body {
   }
 
   .modal-container {
-    position: absolute; /* Adjusted from fixed */
+    position: absolute; 
     top: 0;
     left: 0;
     right: 0;
