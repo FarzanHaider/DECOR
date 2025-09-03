@@ -6,16 +6,15 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 const Profile = () => {
-    //Context
+    
     const [auth, setAuth] = useAuth();
-    //State
     const [name, setname] = useState("");
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const [phoneno, setphoneno] = useState("");
     const [address, setaddress] = useState("");
 
-    //get User Data
+  
     useEffect(() => {
         if (auth?.user) {
             const { email, name, phoneno, address } = auth.user;
@@ -27,7 +26,7 @@ const Profile = () => {
     }, [auth?.user]);
 
 
-    //form function
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
